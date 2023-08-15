@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Task Overview</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="section-title">Daily Process</h1>
+        <ol id="daily-process" class="task-list"></ol>
+
+        <h1 class="section-title">Core Tasks</h1>
+        <ol id="core-tasks" class="task-list"></ol>
+
+        <h1 class="section-title">Experiments</h1>
+        <ol id="experiments" class="task-list"></ol>
+    </div>
+
+    <div id="plus-sign">+</div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close">&times;</span>
+            <form id="new-task-form">
+                <label for="header-select">Select Header:</label>
+                <select id="header-select">
+                    <option value="daily-process">Daily Process</option>
+                    <option value="core-tasks">Core Tasks</option>
+                    <option value="experiments">Experiments</option>
+                </select>
+                <label for="title">Task Title:</label>
+                <input type="text" id="title" required>
+                <label for="time">Estimated Time to Completion:</label>
+                <input type="text" id="time" required>
+                <label for="priority">Task Priority:</label>
+                <select id="priority">
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span id="edit-close">&times;</span>
+            <form id="edit-task-form">
+                <label for="edit-title">Task Title:</label>
+                <input type="text" id="edit-title" required>
+                <label for="edit-time">Estimated Time to Completion:</label>
+                <input type="text" id="edit-time" required>
+                <label for="edit-priority">Task Priority:</label>
+                <select id="edit-priority">
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+                <button type="submit">Save Changes</button>
+                <button type="button" id="delete-task">Delete Task</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
